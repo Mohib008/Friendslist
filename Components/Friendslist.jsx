@@ -22,13 +22,13 @@ function friendslist() {
                 ? `${friend.name} owes you $${-friend.balance}`
                 : `${friend.name} is even with you`}
             </p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">
+            <button className="bg-blue-300 hover:bg-blue-400 hover:text-gray-100 transition-all duration-300 hover:shadow-2xl text-gray-500 px-4 py-2 rounded mt-2">
               Pay {friend.name}
             </button>
-            <button className="bg-red-500 text-white px-4 py-2 rounded mt-2 ml-2">
+            <button className="bg-red-300 text-gray-500 hover:bg-red-400 hover:text-gray-100 transition-all duration-300 hover:shadow-2xl px-4 py-2 rounded mt-2 ml-2">
               Remove
             </button>
-            <button className="bg-green-500 text-white px-4 py-2 rounded mt-2 ml-2">
+            <button className="bg-green-300 text-gray-500 px-4 py-2 hover:bg-green-400 hover:text-white hover:shadow-2xl transition-all duration-300 rounded mt-2 ml-2">
               Edit
             </button>
           </div>
