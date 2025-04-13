@@ -4,8 +4,10 @@ import Data from "./Data";
 function friendslist() {
   return (
     <div className="grid grid-cols-1 gap-4">
-      <div>
-        This is FriendsList!
+      <div className="absolute sticky left-0 right-0 bg-white top-0 z-50 p-4 rounded shadow-md">
+        <h1 className="text-2xl font-bold">Friends List</h1>
+      </div>
+      <div className="grid grid-cols-2 gap-2 relative h-screen w-screen bg-gray-100">
         {Data.map((friend) => (
           <div key={friend.id} className="bg-white p-4 rounded shadow-md">
             <img
