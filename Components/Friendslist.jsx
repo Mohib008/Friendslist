@@ -9,7 +9,7 @@ function friendslist() {
       </div>
       <div className="grid grid-cols-2 gap-2 relative h-screen w-screen bg-gray-100">
         {Data.map((friend) => (
-          <div key={friend.id} className="bg-white p-4 rounded shadow-md">
+          <div key={friend.id} className="bg-white p-4 shadow-md">
             <img
               className="w-12 h-12 rounded-full"
               src={friend.image}
