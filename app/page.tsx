@@ -6,15 +6,21 @@ import FormAddFriend from "../Components/FormAddFriend"
 
 export default function Home() {
   const [friends, setFriends] = useState<string[]>([]);
+  const [removeFriend, setRemoveFriend] = useState<string | null>(null);
 
   const handleAddFriend = (newFriend: string) => {
     setFriends([...friends, newFriend]);
   };
-          <Friendslist friends={friends} onAddFriend={handleAddFriend} />
+  // Function to remove a friend from the list
+
+  const handleRemoveFriend = (friendToRemove: string) => {
+    setFriends(friends.filter(friend => friend !== friendToRemove));
+  };
+  return (
     <>
       <div className="grid grid-rows items-center justify-items-center text-gray-500 bg-white gap-2 m-2 font-[family-name:var(--font-geist-sans)]">
         <section className="grid grid-cols items-center justify-center h-screen w-screen max-w-auto bg-gray-100 gap-4">
-          <Friendslist />
+          <Friendslist onRemoveFriend={handleRemoveFriend} />
           <FormAddFriend onAddFriend={handleAddFriend} />
         </section>
         <section className="grid grid-cols items-center justify-center h-screen w-screen max-w-auto bg-gray-100 gap-4">
