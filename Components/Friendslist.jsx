@@ -1,11 +1,30 @@
 import React from "react";
 import Data from "./Data";
 
-function friendslist() {
+/**
+ * @typedef {Object} FriendslistProps
+ * @property {string[]} friends - List of friends.
+ * @property {(newFriend: string) => void} onAddFriend - Function to add a new friend.
+ */
+
+function friendslist({ friends, onAddFriend } = {}) {
   return (
     <div className="grid grid-cols-1 gap-4">
       <div className="absolute sticky left-0 right-0 bg-white top-0 z-50 p-4 rounded shadow-md">
         <h1 className="text-2xl font-bold">Friends List</h1>
+      </div>
+      <div>
+        <ul>
+          {friends.map((friend, index) => (
+            <li key={index}>{friend}</li>
+          ))}
+        </ul>
+        <button
+          className="bg-red-300 text-gray-500 hover:bg-red-400 hover:text-gray-100 transition-all duration-300 hover:shadow-2xl px-4 py-2 rounded mt-2 ml-2"
+          onClick={() => onAddFriend("New Friend")}
+        >
+          Add Friend
+        </button>
       </div>
       <div className="grid grid-cols-2 gap-2 relative h-screen w-screen bg-gray-100">
         {Data.map((friend) => (
