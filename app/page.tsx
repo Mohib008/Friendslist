@@ -7,7 +7,6 @@ import FormAddFriend from "../Components/FormAddFriend";
 
 export default function Home() {
   const [friends, setFriends] = useState<string[]>([]);
-  //const [removeFriend, setRemoveFriend] = useState<string | null>(null);
 
   const handleAddFriend = (newFriend: string) => {
     setFriends([...friends, newFriend]);
@@ -16,7 +15,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows items-center justify-items-center text-gray-500 bg-white gap-2 m-2 font-[family-name:var(--font-geist-sans)]">
       <section className="grid grid-cols items-center justify-center h-screen w-screen max-w-auto bg-gray-100 gap-4">
-        <Friendslist friends={friends} />
+        <Friendslist friends={friends} onAddFriend={handleAddFriend} />
         <FormAddFriend onAddFriend={handleAddFriend} />
       </section>
       <section className="grid grid-cols items-center justify-center h-screen w-screen max-w-auto bg-gray-100 gap-4">
