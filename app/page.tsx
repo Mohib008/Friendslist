@@ -4,6 +4,7 @@ import Friendslist from "../Components/Friendslist";
 import App from "../Components/app";
 import Footer from "../Components/footer";
 import FormAddFriend from "../Components/FormAddFriend";
+import BgColor from "../Components/BgColor";
 
 export default function Home() {
   const [friends, setFriends] = useState<string[]>([]);
@@ -24,6 +25,9 @@ export default function Home() {
       </section>
       <section className="grid grid-cols h-screen w-screen bg-gray-100 items-center justify-center gap-4">
         <Footer />
+      </section>
+      <section className="grid grid-cols h-screen w-screen bg-gray-100 items-center justify-center gap-4">
+        <BgColor />
       </section>
     </div>
   );
