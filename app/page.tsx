@@ -5,7 +5,7 @@ import App from "../Components/app";
 import Footer from "../Components/footer";
 import FormAddFriend from "../Components/FormAddFriend";
 import BgColor from "../Components/BgColor";
-import ColorBox from "../Components/colorBox";
+import ColorBoxGrid from "../Components/colorBoxGrid";
 
 export default function Home() {
   const [friends, setFriends] = useState<string[]>([]);
@@ -31,7 +31,7 @@ export default function Home() {
         <BgColor />
       </section>
       <section className="grid grid-cols h-screen w-screen bg-gray-100 items-center justify-center gap-4">
-        <ColorBox />
+        <ColorBoxGrid />
       </section>
     </div>
   );
