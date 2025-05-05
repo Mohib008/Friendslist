@@ -7,7 +7,11 @@ function colorBoxGrid() {
     boxes.push(<ColorBox key={i} />);
     // The key prop is used to uniquely identify each ColorBox component in the array.
   }
-  return <div className="flex flex-rows flex-wrap h-110 w-110">{boxes}</div>;
+  return (
+    <div className="flex flex-rows flex-wrap h-105 w-110 gap-x-0.5">
+      {boxes}
+    </div>
+  );
 }
 
 export default colorBoxGrid;

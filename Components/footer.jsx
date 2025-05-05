@@ -34,10 +34,16 @@ function footer() {
           >
             Increment
           </button>
-          <button className="bg-blue-400 hover:bg-blue-500 rounded-xl p-3  hover:text-white font-bold">
+          <button
+            onClick={decreamntCount}
+            className="bg-blue-400 hover:bg-blue-500 rounded-xl p-3  hover:text-white font-bold"
+          >
             Decrement
           </button>
-          <button className="bg-blue-400 hover:bg-blue-500 rounded-xl p-3  hover:text-white font-bold">
+          <button
+            onClick={restCount}
+            className="bg-blue-400 hover:bg-blue-500 rounded-xl p-3  hover:text-white font-bold"
+          >
             Reset
           </button>
         </div>
